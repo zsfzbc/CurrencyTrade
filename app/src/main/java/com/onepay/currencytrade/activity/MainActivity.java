@@ -1,8 +1,10 @@
 package com.onepay.currencytrade.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -40,6 +42,7 @@ public class MainActivity extends BaseActivity {
         // swipe_ly.setOnRefreshListener(this);
         // swipe_ly.setColorSchemeResources(android.R.color.holo_red_light, android.R.color.holo_green_light, android.R.color.holo_blue_bright, android.R.color.holo_orange_light);
         webViewDescription = (WebView) findViewById(R.id.webViewDescription);
+        webViewDescription.setLayerType(View.LAYER_TYPE_SOFTWARE,null);
         webViewDescription.setBackgroundColor(0); // 设置背景色
         //webViewDescription.getBackground().setAlpha(0); // 设置填充透明度 范围：0-255
         webViewDescription.setBackgroundResource(R.mipmap.login_screen);
